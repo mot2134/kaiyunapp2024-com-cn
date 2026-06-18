@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>云开 · 简明指南</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f3f9f7;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      color: #1c2e2c;
+      padding: 2rem 1.2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+
+    .page {
+      background: #ffffff;
+      border-radius: 36px;
+      padding: 2.4rem 1.8rem;
+      box-shadow: 0 12px 28px -10px rgba(10, 60, 50, 0.08);
+    }
+
+    .hero-tag {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #2f8f7e;
+      border-left: 4px solid #2f8f7e;
+      padding-left: 0.75rem;
+      margin-bottom: 1.2rem;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #0b2c28;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+    }
+
+    .intro-sentence {
+      font-size: 1.05rem;
+      color: #2f4f4a;
+      max-width: 36em;
+      margin: 0.6rem 0 1.8rem 0;
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin: 2.4rem 0 2rem;
+    }
+
+    .card {
+      background: #f9fdfb;
+      border: 1px solid #d6e7e1;
+      border-radius: 24px;
+      padding: 1.6rem 1.3rem;
+      transition: background 0.15s, box-shadow 0.15s;
+    }
+
+    .card:hover {
+      background: #f2f9f6;
+      box-shadow: 0 4px 12px rgba(30, 95, 80, 0.04);
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #0b3b34;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .card h3 span {
+      background: #d1ece2;
+      font-size: 0.9rem;
+      border-radius: 40px;
+      padding: 0.1rem 0.6rem;
+      color: #10564a;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #2d524b;
+      margin: 0.2rem 0 0;
+    }
+
+    .scene-block {
+      background: #edf6f2;
+      border-radius: 28px;
+      padding: 1.8rem 1.6rem;
+      margin: 2rem 0 1.8rem;
+    }
+
+    .scene-block h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #0c352e;
+      margin-bottom: 0.8rem;
+    }
+
+    .scene-block p {
+      color: #1e4840;
+      margin-bottom: 0.6rem;
+    }
+
+    .reminder-box {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.25rem 0.4rem;
+      background: #ffffff;
+      border-left: 6px solid #2f8f7e;
+      padding: 1.2rem 1.3rem;
+      border-radius: 18px;
+      margin: 1.8rem 0 2rem;
+      font-size: 0.95rem;
+    }
+
+    .reminder-box a {
+      color: #10564a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dashed #2f8f7e;
+      transition: border 0.1s;
+    }
+
+    .reminder-box a:hover {
+      border-bottom: 2px solid #1b7d6b;
+    }
+
+    .faq-mini {
+      padding: 1.5rem 0 0.2rem;
+      border-top: 1px solid #d7e7e0;
+      margin-top: 1.6rem;
+    }
+
+    .faq-mini details {
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    .faq-mini summary {
+      font-weight: 500;
+      color: #115348;
+      cursor: pointer;
+      padding: 0.5rem 0;
+      transition: color 0.1s;
+    }
+
+    .faq-mini summary:hover {
+      color: #0d7a63;
+    }
+
+    .faq-mini details p {
+      color: #2b544b;
+      margin-left: 0.8rem;
+      padding: 0.3rem 0 0.6rem;
+    }
+
+    .closing-line {
+      margin-top: 2.2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #d7e7e0;
+      font-size: 0.95rem;
+      color: #2b5950;
+      text-align: right;
+    }
+
+    @media (max-width: 540px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .page {
+        padding: 1.6rem 1.2rem;
+        border-radius: 28px;
+      }
+      h1 {
+        font-size: 1.7rem;
+      }
+      .grid-cards {
+        gap: 1rem;
+      }
+      .card {
+        padding: 1.2rem 1rem;
+      }
+      .scene-block {
+        padding: 1.2rem 1rem;
+      }
+      .reminder-box {
+        padding: 1rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="hero-tag">一条路径 · 克制动荡</div>
+  <h1>云开 · 从一条链接开始</h1>
+  <p class="intro-sentence">有时候，简洁的路线图比冗长的解释更有用。下面这份指南，帮你快速梳理脉络。</p>
+
+  <div class="grid-cards">
+    <div class="card">
+      <h3>📍 始终如一的地址 <span>关键</span></h3>
+      <p>把<a href="https://www.kaiyunapp2024.com.cn" style="color:#10564a; text-decoration: underline; text-underline-offset: 3px;">云开</a>视为你的起点。无论环境怎样变化，这个地址保持稳定，适合存入书签。</p>
+    </div>
+    <div class="card">
+      <h3>🧩 轻量入口</h3>
+      <p>页面加载流畅，没有冗余跳转。你需要的核心功能、信息更新，都在首屏范围内。</p>
+    </div>
+    <div class="card">
+      <h3>🔁 被动适应</h3>
+      <p>如果遇到访问波动，不要反复刷新 —— 稍等片刻，网络会自己找到通路。保持耐心。</p>
+    </div>
+    <div class="card">
+      <h3>📌 版本标记</h3>
+      <p>注意页面底部的版本日期或校验字串，确保你看到的是最新发布。老链接可能已经失效。</p>
+    </div>
+  </div>
+
+  <div class="scene-block">
+    <h2>两种常见场景</h2>
+    <p><strong>场景一：</strong>你打开收藏夹，点击之前存好的链接，画面短暂加载后顺利呈现。这说明你的网络环境与目标之间没有阻碍。<br>
+    <strong>场景二：</strong>页面迟迟没有响应，或者出现空白。这时可以检查一下本地网络设置，或者换一个基础 DNS，再试一次。多数情况可以恢复。</p>
+    <p style="margin-top: 0.5rem;">如果仍不成功，可以回到搜索引擎，用“云开 2024”作为关键词，重新找到最新的索引页。</p>
+  </div>
+
+  <div class="reminder-box">
+    <span>🔔 访问提醒 · 请记下这条原始路径：</span>
+    <span><a href="https://www.kaiyunapp2024.com.cn">云开</a></span>
+    <span>— 建议手动输入，避免仿冒拼写。另外，尽量不要在公共设备上保存自动填充。</span>
+  </div>
+
+  <div class="faq-mini">
+    <details>
+      <summary>为什么每次都要用同一个入口？</summary>
+      <p>统一的入口可以避免混乱。很多替代域名会随时间失效，而主站会持续更新跳转逻辑。把<a href="https://www.kaiyunapp2024.com.cn" style="color:#10564a; text-decoration: underline; text-underline-offset: 2px;">云开</a>当作根节点，可以减少记忆负担。</p>
+    </details>
+    <details>
+      <summary>页面打不开时，除了等还能做什么？</summary>
+      <p>尝试切换网络（比如从 Wi-Fi 切到移动数据），或者使用浏览器的隐私模式。如果依然不行，可能是区域性阻断，静置几小时再试。</p>
+    </details>
+    <details>
+      <summary>怎样确认我到达的是正确页面？</summary>
+      <p>正确的页面会显示统一的标识和最新内容。如果页面布局、字体或 logo 与你印象中完全不同，不要输入任何私人信息。</p>
+    </details>
+  </div>
+
+  <div class="closing-line">
+    路径很轻，但方向需要自己确认。<br>
+    希望这份指南能帮你省下无谓的摸索。
+  </div>
+</div>
+</body>
+</html>
